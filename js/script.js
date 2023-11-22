@@ -26,19 +26,17 @@ $(function () {
     //     slide.style.transform = `translateX(${indx * 100}%)`;
     // });
 
-    let i = 1;
+    let i = 0;
     setInterval(() => {
         Array.from(slides).forEach((item, index) => {
-            if (i < slides.length) {
-                item.style.transform = `translateX(-${i * 100}%)`
-            }
+            // Calculate the translation based on the current index
+            const translation = index === i ? 0 : 100 * (index - i);
+
+            // Apply the translation to the current slide
+            item.style.transform = `translateX(${translation}%)`;
         });
 
-        if (i < slides.length) {
-            i++;
-        }
-        else {
-            i = 0;
-        }
+        // Increment the index for the next iteration
+        i = (i + 1) % slides.length;
     }, 2000);
 });

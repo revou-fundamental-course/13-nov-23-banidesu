@@ -146,7 +146,7 @@ section#home .content .col-7 .sliders {
     overflow: hidden;
 }
 
-section#home .content .col-7 .img {
+section#home .content .col-7 .sliders .img {
     width: 100%;
     max-width: 100%;
     height: 200px;
@@ -508,6 +508,11 @@ footer>p {
         flex-direction: row;
         gap: 2rem;
     }
+    
+    section#home .content .col-7 .sliders,
+    section#home .content .col-7 .sliders .img {
+        height: 300px;
+    }
 
     /* section#home .content .col-7 {
         max-width: 100%;
@@ -568,6 +573,11 @@ footer>p {
 
     section#home .content .col-7 {
         max-width: 60%;
+    }
+
+    section#home .content .col-7 .sliders,
+    section#home .content .col-7 .sliders .img {
+        height: 500px;
     }
 
     section#home .content .col-7 .item {
