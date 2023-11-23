@@ -153,6 +153,7 @@ section#home .content .col-7 .sliders .img {
     position: absolute;
     transition: all 0.5s ease;
 }
+
 section#home .content .col-7 .img img {
     width: 100%;
     height: 100%;
@@ -283,6 +284,12 @@ section#home .content .col-5 .card .form-group label {
     color: var(--tertiary);
 }
 
+section#home .content .col-5 .card .form-group input.error:focus,
+section#home .content .col-5 .card .form-group select.error:focus {
+    border: 3px solid #f4817b;
+    box-shadow: 0 0 10px 2px #f4817b;
+}
+
 section#home .content .col-5 .card .form-group input,
 section#home .content .col-5 .card .form-group select {
     padding: 1rem .5rem;
@@ -301,25 +308,29 @@ section#home .content .col-5 .card .form-group input:focus,
 section#home .content .col-5 .card .form-group select:focus {
     box-shadow: 0 0 10px 2px var(--accent);
 }
-
 section#home .content .col-5 .card button {
     padding: 1rem;
     width: 100%;
     font-weight: 600;
     font-size: 1em;
+    border: 0;
+    background-color: #dddddd;
+    border-radius: 7px;
+    cursor: default;
+    transition: all 0.3s ease;
+}
+section#home .content .col-5 .card button:not(:disabled) {
     color: var(--primary);
     background-color: var(--tertiary);
-    border: 0;
-    border-radius: 7px;
     cursor: pointer;
     transition: all 0.3s ease;
 }
 
-section#home .content .col-5 .card button:hover {
+section#home .content .col-5 .card button:hover:not(:disabled) {
     background-color: var(--secondary);
 }
 
-section#home .content .col-5 .card button:focus {
+section#home .content .col-5 .card button:focus:not(:disabled) {
     box-shadow: 0 0 10px 2px var(--tertiary);
 }
 
@@ -508,7 +519,7 @@ footer>p {
         flex-direction: row;
         gap: 2rem;
     }
-    
+
     section#home .content .col-7 .sliders,
     section#home .content .col-7 .sliders .img {
         height: 300px;

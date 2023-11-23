@@ -81,10 +81,12 @@
                         <div class="form-group">
                             <label for="name">Your Name:</label>
                             <input type="text" id="name" placeholder="First and last name">
+                            <small id="nameError" style="color: red; font-weight: 600;"></small>
                         </div>
                         <div class="form-group">
                             <label for="email">Email Address:</label>
                             <input type="text" id="email" placeholder="example@email.com">
+                            <small id="emailError" style="color: red; font-weight: 600;"></small>
                         </div>
                         <div class="form-group">
                             <label for="option">What are you interested in?</label>
@@ -94,8 +96,9 @@
                                 <option value="b">B</option>
                                 <option value="c">C</option>
                             </select>
+                            <small id="optionError" style="color: red; font-weight: 600;"></small>
                         </div>
-                        <button type="submit">SEND</button>
+                        <button type="submit" id="submitButton" disabled>SEND</button>
                     </form>
                 </div>
             </div>
